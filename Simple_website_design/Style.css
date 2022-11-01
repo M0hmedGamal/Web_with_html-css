@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+Body .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(./Photos/Bedroom1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.nav_bar {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav_bar .logo {
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+ul li a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+ul li a::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    background: rgb(192, 98, 22);
+    transition: 0.25s;
+
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: blanchedalmond;
+
+
+}
+
+
+.container p {
+    margin: 15px 10px;
+}
+
+.container h1 {
+    margin: 20px;
+}
+
+button {
+    width: 200px;
+    margin: 30px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid rgb(192, 98, 22);
+    font-weight: bold;
+    color: blanchedalmond;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: rgb(192, 98, 22);
+    position: absolute;
+    border-radius: 25px;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.25s;
+}
+
+button:hover span {
+    width: 100%;
+}
